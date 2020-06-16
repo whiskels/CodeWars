@@ -1,7 +1,5 @@
 package main.java.kyu5;
 
-import java.util.ArrayList;
-
 /**
  * 5 kyu - Snakes and Ladders
  *
@@ -35,6 +33,8 @@ import java.util.ArrayList;
  *      8.  If the Player rolled a double and lands on the finish square “100” without any remaining moves then the
  * Player wins the game and does not have to roll again.
  */
+
+import java.util.ArrayList;
 
 public class SnakesLadders {
     private ArrayList<Player> players = new ArrayList<>();

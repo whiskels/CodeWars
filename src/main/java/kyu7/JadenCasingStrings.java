@@ -1,7 +1,5 @@
 package main.java.kyu7;
 
-import java.util.ArrayList;
-
 /**
  * 7 kyu - Jaden Case Strings
  *
@@ -26,14 +24,16 @@ import java.util.ArrayList;
  * Note that the Java version expects a return value of null for an empty string or null.
  */
 
+import java.util.ArrayList;
+
 public class JadenCasingStrings {
 
     public String toJadenCase(String phrase) {
         try {
             if (phrase.isEmpty()) {return null;}
             else {
-                ArrayList<Character> list = new ArrayList<Character>();
-                String a = "";
+                ArrayList<Character> list = new ArrayList<>();
+                StringBuilder a = new StringBuilder();
                 for (int i = 0; i < phrase.length(); i++) {
                     char c = phrase.charAt(i);
                     char d = 0;
@@ -45,10 +45,10 @@ public class JadenCasingStrings {
                         list.add(c);
                     }
                 }
-                for (int i = 0; i < list.size(); i++) {
-                    a += Character.toString(list.get(i));
+                for (Character character : list) {
+                    a.append(character);
                 }
-                return a;
+                return a.toString();
             }
         }
         catch (Exception e) {

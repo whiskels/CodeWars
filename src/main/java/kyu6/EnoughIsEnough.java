@@ -1,7 +1,5 @@
 package main.java.kyu6;
 
-import java.util.*;
-
 /** 6 kyu - Delete occurrences of an element if it occurs more than n times
  *
  * https://www.codewars.com/kata/554ca54ffa7d91b236000023
@@ -19,6 +17,8 @@ import java.util.*;
  * reordering. For example if N = 2, and the input is [1,2,3,1,2,1,2,3], you take [1,2,3,1,2], drop the next [1,2] since
  * this would lead to 1 and 2 being in the result 3 times, and then take 3, which leads to [1,2,3,1,2,3].
  */
+
+import java.util.*;
 
 public class EnoughIsEnough {
     public static int[] deleteNth(int[] elements, int maxOccurrences) {

@@ -1,8 +1,5 @@
 package main.java.kyu6;
 
-import java.util.ArrayList;
-import java.util.Collections;
-
 /**
  * 6 kyu - Duplicate Encoder
  *
@@ -14,6 +11,9 @@ import java.util.Collections;
  * that character appears only once in the original string, or ")" if that character appears more than once in the
  * original string. Ignore capitalization when determining if a character is a duplicate.
  */
+
+import java.util.ArrayList;
+import java.util.Collections;
 
 public class DuplicateEncoder {
     static String encode(String word) {

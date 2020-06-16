@@ -1,12 +1,5 @@
 package main.java.kyu4;
 
-import org.junit.Before;
-import org.junit.jupiter.api.Test;
-
-import java.util.ArrayList;
-
-import static org.junit.Assert.assertEquals;
-
 /**
  * 4 kyu - Recover a secret string from random triplets
  *
@@ -26,6 +19,12 @@ import static org.junit.Assert.assertEquals;
  * sufficient information to deduce the original string. In particular, this means that the secret string will never
  * contain letters that do not occur in one of the triplets given to you.
  */
+
+import org.junit.jupiter.api.Test;
+
+import java.util.ArrayList;
+
+import static org.junit.Assert.assertEquals;
 
 public class SecretDetective {
     public String recoverSecret(char[][] triplets) {

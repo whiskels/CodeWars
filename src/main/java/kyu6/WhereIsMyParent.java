@@ -1,8 +1,5 @@
 package main.java.kyu6;
 
-import java.util.ArrayList;
-import java.util.Collections;
-
 /**
  * 6 kyu - Where is my parent?!(cry)
  *
@@ -20,6 +17,9 @@ import java.util.Collections;
  * Task:
  * Place all people in alphabetical order where Mothers are followed by their children, i.e. "aAbaBb" => "AaaBbb".
  */
+
+import java.util.ArrayList;
+import java.util.Collections;
 
 public class WhereIsMyParent {
     static String findChildren(final String text) {

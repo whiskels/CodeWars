@@ -1,7 +1,5 @@
 package main.java.kyu5;
 
-import java.util.*;
-
 /**
  * 5 kyu - Factorial Decomposition
  *
@@ -21,6 +19,8 @@ import java.util.*;
  *  -   In Fortran - as in any other language - the returned string is not permitted to contain any redundant trailing
  * whitespace: you can use dynamically allocated character strings.
  */
+
+import java.util.*;
 
 public class FactorialDecomposition {
     public static String decomp(int n) {

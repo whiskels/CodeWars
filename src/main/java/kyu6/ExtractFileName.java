@@ -1,8 +1,5 @@
 package main.java.kyu6;
 
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
 /**
  * 6 kyu - extract file name
  *
@@ -17,6 +14,9 @@ import java.util.regex.Pattern;
  *     You'll have then a filename with an extension
  *     it will always have an extra extension at the end
  */
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class ExtractFileName {
     public static String extractFileName(String dirtyFileName) {

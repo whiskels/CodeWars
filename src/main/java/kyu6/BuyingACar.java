@@ -1,9 +1,5 @@
 package main.java.kyu6;
 
-import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
-
 /**
  * 6 kyu - Bying a car
  *
@@ -25,6 +21,11 @@ import static org.junit.jupiter.api.Assertions.*;
  * How many months will it take him to save up enough money to buy the car he wants, and how much money will he have
  * left over?
  */
+
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.*;
+
 public class BuyingACar {
     public static int[] nbMonths(int startPriceOld, int startPriceNew, int savingperMonth, double percentLossByMonth) {
         if (startPriceNew <= startPriceOld) return new int[]{0, startPriceOld - startPriceNew};
