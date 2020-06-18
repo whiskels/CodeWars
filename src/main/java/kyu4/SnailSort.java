@@ -29,7 +29,6 @@ public class SnailSort {
         final int lastY = height / 2;
         final int lastX = width % 2 == 0 ? width / 2 - 1 : width / 2;
 
-
         int y = 0, x = 0, dirX = 1, dirY = 0, i = 0;
         int leftBorder = -1, rightBorder = width;
         int upperBorder = -1, lowerBorder = height;
