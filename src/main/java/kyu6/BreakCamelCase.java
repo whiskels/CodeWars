@@ -7,7 +7,8 @@ package main.java.kyu6;
  *
  * Details:
  *
- * Complete the solution so that the function will break up camel casing, using a space between words.
+ * Complete the solution so that the function will break up camel casing, using a space between
+ * words.
  */
 
 public class BreakCamelCase {

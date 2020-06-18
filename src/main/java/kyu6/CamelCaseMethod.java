@@ -7,16 +7,22 @@ package main.java.kyu6;
  *
  * Details:
  *
- * Write simple .camelCase method (camel_case function in PHP, CamelCase in C# or camelCase in Java) for strings.
- * All words must have their first letter capitalized without spaces.
+ * Write simple .camelCase method (camel_case function in PHP, CamelCase in C# or camelCase in
+ * Java) for strings. All words must have their first letter capitalized without spaces.
  */
+
+import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
 
 public class CamelCaseMethod {
     public static String camelCase(String str) {
-        StringBuilder sb = new StringBuilder();
+        final StringBuilder sb = new StringBuilder();
         boolean isPreviousCharSpace = false;
+
         for (int i = 0; i < str.length(); i++) {
-            char current = str.charAt(i);
+            final char current = str.charAt(i);
+
             if ((i == 0 || isPreviousCharSpace) && !Character.isWhitespace(current)) {
                 sb.append(Character.toUpperCase(current));
                 isPreviousCharSpace = false;
@@ -26,6 +32,42 @@ public class CamelCaseMethod {
                 sb.append(current);
             }
         }
+
         return sb.toString();
+    }
+
+    @Test
+    public void testTwoWords() {
+        assertEquals("TestCase", camelCase("test case"));
+    }
+
+    @Test
+    public void testThreeWords() {
+        assertEquals("CamelCaseMethod", camelCase("camel case method"));
+    }
+
+    @Test
+    public void testLeadingSpace() {
+        assertEquals("CamelCaseWord", camelCase(" camel case word"));
+    }
+
+    @Test
+    public void testTrailingSpace() {
+        assertEquals("SayHello", camelCase("say hello "));
+    }
+
+    @Test
+    public void testSingleLetter() {
+        assertEquals("Z", camelCase("z"));
+    }
+
+    @Test
+    public void testTwoSpacesBetweenWords() {
+        assertEquals("AbC", camelCase("ab  c"));
+    }
+
+    @Test
+    public void testEmptyString() {
+        assertEquals("", camelCase(""));
     }
 }

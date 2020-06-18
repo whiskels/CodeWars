@@ -7,9 +7,9 @@ package main.java.kyu6;
  *
  * Details:
  *
- * Given two arrays a and b write a function comp(a, b) (compSame(a, b) in Clojure) that checks whether the two arrays
- * have the "same" elements, with the same multiplicities. "Same" means, here, that the elements in b are the elements
- * in a squared, regardless of the order.
+ * Given two arrays a and b write a function comp(a, b) (compSame(a, b) in Clojure) that checks
+ * whether the two arrays have the "same" elements, with the same multiplicities. "Same" means,
+ * here, that the elements in b are the elements in a squared, regardless of the order.
  */
 
 import java.util.Arrays;
@@ -17,8 +17,8 @@ import java.util.Arrays;
 public class AreTheyTheSame {
     public static boolean comp(int[] a, int[] b) {
         if (a == null || b == null) {
-            return false;}
-        else if (a.length == 0 || b.length == 0) {
+            return false;
+        } else if (a.length == 0 || b.length == 0) {
             return a.length == b.length;
         } else {
             for (int i = 0; i < a.length; i++) {

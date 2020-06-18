@@ -7,19 +7,21 @@ package main.java.kyu6;
  *
  * Details:
  *
- * Complete the method/function so that it converts dash/underscore delimited words into camel casing. The first word
- * within the output should be capitalized only if the original word was capitalized (known as Upper Camel Case, also
- * often referred to as Pascal case).
+ * Complete the method/function so that it converts dash/underscore delimited words into camel
+ * casing. The first word within the output should be capitalized only if the original word was
+ * capitalized (known as Upper Camel Case, also often referred to as Pascal case).
  */
 
 public class ConvertStringToCamelCase {
     static String toCamelCase(String s) {
-        String regex = "([^a-zA-Z']+)'*\\1*";
-        String[] split = s.split(regex);
-        StringBuilder sb = new StringBuilder();
+        final String regex = "([^a-zA-Z']+)'*\\1*";
+        final String[] split = s.split(regex);
+        final StringBuilder sb = new StringBuilder();
+
         for (int i = 0; i < split.length; i++) {
-            if (i == 0) sb.append(split[i]);
-            else if (split[i].length()>0){
+            if (i == 0) {
+                sb.append(split[i]);
+            } else if (split[i].length()>0){
                 sb.append(split[i].replaceFirst(split[i].substring(0, 1), split[i].substring(0, 1).toUpperCase()));
             }
         }

@@ -20,9 +20,11 @@ import java.util.regex.Pattern;
 
 public class ExtractFileName {
     public static String extractFileName(String dirtyFileName) {
-        Pattern pattern = Pattern.compile("_(.+)\\.");
-        Matcher matcher = pattern.matcher(dirtyFileName);
+        final Pattern pattern = Pattern.compile("_(.+)\\.");
+        final Matcher matcher = pattern.matcher(dirtyFileName);
+
         matcher.find();
+
         return matcher.group(1);
     }
 }

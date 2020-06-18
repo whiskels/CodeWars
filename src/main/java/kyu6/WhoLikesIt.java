@@ -7,33 +7,29 @@ package main.java.kyu6;
  *
  * Details:
  *
- * ou probably know the "like" system from Facebook and other pages. People can "like" blog posts, pictures or other
- * items. We want to create the text that should be displayed next to such an item.
+ * ou probably know the "like" system from Facebook and other pages. People can "like" blog posts,
+ * pictures or other items. We want to create the text that should be displayed next to such an
+ * item.
  *
- * Implement a function likes :: [String] -> String, which must take in input array, containing the names of people who
- * like an item. It must return the display text as shown in the examples
+ * Implement a function likes :: [String] -> String, which must take in input array, containing the
+ * names of people who like an item. It must return the display text as shown in the examples
  */
 
 public class WhoLikesIt {
     public static String whoLikesIt(String... names) {
-        String line;
-        int len = names.length;
+        final int len = names.length;
+
         switch (len) {
             case 0:
-                line = "no one likes this";
-                break;
+                return "no one likes this";
             case 1:
-                line = String.format("%s likes this", names[0]);
-                break;
+                return String.format("%s likes this", names[0]);
             case 2:
-                line = String.format("%s and %s like this", names[0], names[1]);
-                break;
+                return String.format("%s and %s like this", names[0], names[1]);
             case 3:
-                line = String.format("%s, %s and %s like this", names[0], names[1], names[2]);
-                break;
+                return String.format("%s, %s and %s like this", names[0], names[1], names[2]);
             default:
-                line = String.format("%s, %s and %d others like this", names[0],names[1],len-2);
+                return String.format("%s, %s and %d others like this", names[0], names[1], len-2);
         }
-        return line;
     }
 }

@@ -7,15 +7,18 @@ package main.java.kyu6;
  *
  * Details:
  *
- * Mothers arranged a dance party for the children in school. At that party, there are only mothers and their children.
- * All are having great fun on the dance floor when suddenly all the lights went out. It's a dark night and no one can
- * see each other. But you were flying nearby and you can see in the dark and have ability to teleport people anywhere
- * you want.
- * Legend:
- * -Uppercase letters stands for mothers, lowercase stand for their children, i.e. "A" mother's children are "aaaa".
+ * Mothers arranged a dance party for the children in school. At that party, there are only mothers
+ * and their children.All are having great fun on the dance floor when suddenly all the lights went
+ * out. It's a dark night and no one can see each other. But you were flying nearby and you can see
+ * in the dark and have ability to teleport people anywhere you want.
+ *  Legend:
+ * -Uppercase letters stands for mothers, lowercase stand for their children, i.e. "A" mother's
+ * children are "aaaa".
  * -Function input: String contains only letters, uppercase letters are unique.
- * Task:
- * Place all people in alphabetical order where Mothers are followed by their children, i.e. "aAbaBb" => "AaaBbb".
+ *
+ *  Task:
+ * Place all people in alphabetical order where Mothers are followed by their children, i.e.
+ * "aAbaBb" => "AaaBbb".
  */
 
 import java.util.ArrayList;
@@ -23,20 +26,25 @@ import java.util.Collections;
 
 public class WhereIsMyParent {
     static String findChildren(final String text) {
-        ArrayList<Character> chars = new ArrayList<>();
+        final ArrayList<Character> chars = new ArrayList<>();
+
         for (Character ch : text.toCharArray()) {
             chars.add(ch);
         }
+
         Collections.sort(chars);
-        StringBuilder sb = new StringBuilder();
+
+        final StringBuilder sb = new StringBuilder();
+
         for (int i = 0; i < chars.size(); i++) {
-            char currChar = chars.get(i);
-            char lowChar = Character.toLowerCase(currChar);
+            final char currChar = chars.get(i);
+            final char lowChar = Character.toLowerCase(currChar);
             if (lowChar != currChar) {
                 sb.append(currChar);
 
                 if (chars.get(i) != chars.get(i + 1)) {
-                    int frequency = Collections.frequency(chars, lowChar);
+                    final int frequency = Collections.frequency(chars, lowChar);
+
                     if (frequency > 0) {
                         for (int j = 0; j < frequency; j++) {
                             sb.append(lowChar);

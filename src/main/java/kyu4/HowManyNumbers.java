@@ -8,25 +8,18 @@ package main.java.kyu4;
  * Details:
  *
  * We want to generate all the numbers of three digits where:
- *
- *     the sum of their digits is equal to 10.
- *
- *     their digits are in increasing order (the numbers may have two or more equal contiguous digits)
+ *  - the sum of their digits is equal to 10.
+ *  - their digits are in increasing order (the numbers may have two or more equal contiguous digits)
  *
  * The numbers that fulfill the two above constraints are: 118, 127, 136, 145, 226, 235, 244, 334
  *
  * Make a function that receives two arguments:
- *
- *     the sum of digits value
- *
- *     the desired number of digits for the numbers
+ *  - the sum of digits value
+ *  - the desired number of digits for the numbers
  *
  * The function should output an array with three values: [1,2,3]
- *
  * 1 - the total number of possible numbers
- *
  * 2 - the minimum number
- *
  * 3 - the maximum number
  */
 
@@ -39,7 +32,7 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class HowManyNumbers {
-    public static long count, min, max;
+    private static long count, min, max;
 
     public static List<Long> findAll(final int sumDigits, final int numDigits) {
         count = 0;
@@ -49,15 +42,17 @@ public class HowManyNumbers {
         recursiveSearch(0L, 1, sumDigits, numDigits);
 
         ArrayList<Long> result = new ArrayList<>();
+
         if (count > 0) {
             result.add(count);
             result.add(min);
             result.add(max);
         }
+
         return result;
     }
 
-    public static void recursiveSearch(Long currNum, int prevDigit, int sumLeft, int digitsLeft) {
+    private static void recursiveSearch(Long currNum, int prevDigit, int sumLeft, int digitsLeft) {
         if (sumLeft == 0 && digitsLeft == 0) {
             if (count == 0) min = currNum;
             min = min < currNum ? min : currNum;
@@ -141,6 +136,7 @@ public class HowManyNumbers {
 
     @Test
     public void HardTests() {
-        assertEquals(Arrays.asList(409L, 11112999L, 44444445L), HowManyNumbers.findAll(33, 8));
+        assertEquals(Arrays.asList(409L, 11112999L, 44444445L),
+                HowManyNumbers.findAll(33, 8));
     }
 }

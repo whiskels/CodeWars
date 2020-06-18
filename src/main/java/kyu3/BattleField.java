@@ -7,26 +7,29 @@ package main.java.kyu3;
  *
  * Details:
  *
- * Write a method that takes a field for well-known board game "Battleship" as an argument and returns true if it has a
- * valid disposition of ships, false otherwise. Argument is guaranteed to be 10*10 two-dimension array. Elements in the
- * array are numbers, 0 if the cell is free and 1 if occupied by ship.
+ * Write a method that takes a field for well-known board game "Battleship" as an argument and
+ * returns true if it has a valid disposition of ships, false otherwise. Argument is guaranteed
+ * to be 10*10 two-dimension array. Elements in the array are numbers, 0 if the cell is free and
+ * 1 if occupied by ship.
  *
- * Battleship (also Battleships or Sea Battle) is a guessing game for two players. Each player has a 10x10 grid
- * containing several "ships" and objective is to destroy enemy's forces by targetting individual cells on his field.
- * The ship occupies one or more cells in the grid. Size and number of ships may differ from version to version.
+ * Battleship (also Battleships or Sea Battle) is a guessing game for two players. Each player has
+ * a 10x10 grid containing several "ships" and objective is to destroy enemy's forces by targetting
+ * individual cells on his field.mThe ship occupies one or more cells in the grid. Size and number
+ * of ships may differ from version to version.
+ *
  * In this kata we will use Soviet/Russian version of the game.
  *
- * Before the game begins, players set up the board and place the ships accordingly to the following rules:
+ * Before the game begins, players set up the board and place the ships accordingly to the
+ * following rules:
  *
- *   - There must be single battleship (size of 4 cells), 2 cruisers (size 3), 3 destroyers (size 2) and 4 submarines
+ *   - There must be single battleship (size of 4 cells), 2 cruisers (size 3), 3 destroyers
+ *   (size 2) and 4 submarines
  *     (size 1). Any additional ships are not allowed, as well as missing ships.
  *   - Each ship must be a straight line, except for submarines, which are just single cell.
  *   - The ship cannot overlap or be in contact with any other ship, neither by edge nor by corner.
  */
 
-import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.*;
 
 public class BattleField {
     private static int submarines;
@@ -47,7 +50,7 @@ public class BattleField {
         for (int i = 0; i < field.length; i++) {
             for (int j = 0; j < field[i].length; j++) {
                 if (!checkedCells[i][j]) {
-                    if (field[i][j] == 1 && !CheckShip(i, j)) {
+                    if (field[i][j] == 1 && !checkPart(i, j)) {
                         return false;
                     } else {
                         checkedCells[i][j] = true;
@@ -57,13 +60,14 @@ public class BattleField {
         }
 
         System.out.println("******************");
+
         return submarines == 0 && cruiserShips == 0 && destroyers == 0 && battleShips == 0;
     }
 
-    public static boolean CheckShip(int y, int x) {
+    private static boolean checkPart(int y, int x) {
         System.out.println(String.format("Ship part found at %d %d", y, x));
 
-        int neighbors = countNeighbors(y, x);
+        final int neighbors = countNeighbors(y, x);
 
         if (neighbors > 2) {
             return false;
@@ -78,15 +82,11 @@ public class BattleField {
         return true;
     }
 
-    public static int countNeighbors(int y, int x) {
+    private static int countNeighbors(int y, int x) {
         int neighbors = 0;
         for (int i = y - 1; i <= y + 1; i++) {
             for (int j = x - 1; j <= x + 1; j++) {
-                if (!(i == y && j == x)
-                        && i >= 0
-                        && j >= 0
-                        && i < game.length
-                        && j < game[i].length) {
+                if (!(i == y && j == x) && isValidCoodrinates(i, j)) {
                     if (game[i][j] == 1) {
                         neighbors++;
                     } else {
@@ -99,7 +99,14 @@ public class BattleField {
         return neighbors;
     }
 
-    public static boolean findShip(int y, int x) {
+    private static boolean isValidCoodrinates(int y, int x) {
+        return y >= 0 &&
+               x >= 0 &&
+               y < game.length &&
+               x < game[y].length;
+    }
+
+    private static boolean findShip(int y, int x) {
         System.out.println("\t- estimating ship size");
         int size = 1;
 
@@ -107,10 +114,7 @@ public class BattleField {
 
         for (int i = y - 1; i <= y + 1; i++) {
             for (int j = x - 1; j <= x + 1; j++) {
-                if (i >= 0
-                        && j >= 0
-                        && i < game.length
-                        && j < game[i].length) {
+                if (isValidCoodrinates(i, j)) {
                     if (i == y && j == x) {
                     } else if (game[i][j] == 1) {
                         if (isDiagonalNeighborPresent(i, j)) return false;
@@ -141,13 +145,14 @@ public class BattleField {
         }
 
         removeShipBySize(currentY-dY, currentX-dX, dY, dX, size);
+
         return submarines >= 0 && cruiserShips >= 0 && destroyers >= 0 && battleShips >= 0;
     }
 
-    public static boolean isDiagonalNeighborPresent(int y, int x) {
+    private static boolean isDiagonalNeighborPresent(int y, int x) {
         for (int i = y - 1; i <= y + 1; i++) {
             for (int j = x - 1; j <= x + 1; j++) {
-                if (i != y && j != x && i > 0 && j > 0 && i < game.length && j < game[i].length) {
+                if (i != y && j != x && isValidCoodrinates(i, j)) {
                     if (game[i][j] == 1) {
                         return true;
                     } else {
@@ -160,8 +165,9 @@ public class BattleField {
         return false;
     }
 
-    public static void removeShipBySize(int currentY, int currentX, int dY, int dX, int size) {
+    private static void removeShipBySize(int currentY, int currentX, int dY, int dX, int size) {
         System.out.println(String.format("\t- ship size: %d", size));
+
         if (size == 2) {
             destroyers--;
             System.out.println(String.format("\t- Destroyer count: %d", destroyers));
@@ -174,6 +180,7 @@ public class BattleField {
             battleShips--;
             System.out.println(String.format("\t- Battleship count: %d", battleShips));
         }
+
         while (size != 0) {
             checkedCells[currentY][currentX] = true;
             currentX -= dX;
@@ -195,7 +202,7 @@ public class BattleField {
                 {0, 0, 0, 1, 0, 0, 0, 0, 0, 0},
                 {0, 0, 0, 0, 0, 0, 0, 1, 0, 0},
                 {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}};
-        assertEquals(true, BattleField.fieldValidator(battleField));
+        Assertions.assertEquals(true, BattleField.fieldValidator(battleField));
     }
 
     @Test
@@ -211,7 +218,7 @@ public class BattleField {
                 {0, 0, 0, 0, 1, 0, 0, 0, 1, 0},
                 {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
                 {0, 0, 1, 1, 1, 1, 0, 0, 0, 0}};
-        assertEquals(true, BattleField.fieldValidator(battleField));
+        Assertions.assertEquals(true, BattleField.fieldValidator(battleField));
     }
 
     @Test
@@ -227,7 +234,7 @@ public class BattleField {
                 {1, 0, 0, 1, 0, 0, 0, 0, 0, 0},
                 {0, 0, 0, 0, 0, 0, 0, 1, 0, 0},
                 {0, 0, 1, 1, 1, 1, 0, 1, 0, 0}};
-        assertEquals(true, BattleField.fieldValidator(battleField));
+        Assertions.assertEquals(true, BattleField.fieldValidator(battleField));
     }
 
     @Test
@@ -243,6 +250,6 @@ public class BattleField {
                 {0, 1, 0, 0, 0, 0, 0, 1, 1, 1},
                 {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
                 {0, 1, 0, 1, 1, 1, 1, 0, 0, 1}};
-        assertEquals(true, BattleField.fieldValidator(battleField));
+        Assertions.assertEquals(true, BattleField.fieldValidator(battleField));
     }
 }

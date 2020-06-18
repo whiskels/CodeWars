@@ -23,34 +23,50 @@ package main.java.kyu4;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import static org.junit.Assert.assertEquals;
 
 public class SecretDetective {
     public String recoverSecret(char[][] triplets) {
-        ArrayList<Character> result = new ArrayList<>();
+        List<Character> res = new ArrayList<>();
+
         for (char[] triplet : triplets) {
-            char x = triplet[0];
-            char y = triplet[1];
-            char z = triplet[2];
-            if (!result.contains(x)) result.add(0, x);
-            if (!result.contains(y)) result.add(result.indexOf(x), y);
-            if (result.contains(y) && result.indexOf(y) < result.indexOf(x)) {
-                int index = result.indexOf(y);
-                result.remove(index);
-                result.add(result.indexOf(x) + 1, y);
+            final char x = triplet[0];
+            final char y = triplet[1];
+            final char z = triplet[2];
+
+            if (!res.contains(x)) {
+                res.add(0, x);
             }
-            if (!result.contains(z)) result.add(result.indexOf(y), z);
-            if (result.contains(z) && result.indexOf(z) < result.indexOf(y)) {
-                int index = result.indexOf(z);
-                result.remove(index);
-                result.add(result.indexOf(y) + 1, z);
+
+            if (!res.contains(y)) {
+                res.add(res.indexOf(x), y);
+            }
+
+            if (res.contains(y) && res.indexOf(y) < res.indexOf(x)) {
+                final int index = res.indexOf(y);
+                res.remove(index);
+                res.add(res.indexOf(x) + 1, y);
+            }
+
+            if (!res.contains(z)) {
+                res.add(res.indexOf(y), z);
+            }
+
+            if (res.contains(z) && res.indexOf(z) < res.indexOf(y)) {
+                final int index = res.indexOf(z);
+                res.remove(index);
+                res.add(res.indexOf(y) + 1, z);
             }
         }
-        StringBuilder sb = new StringBuilder();
-        for (Character c : result) {
+
+        final StringBuilder sb = new StringBuilder();
+
+        for (Character c : res) {
             sb.append(c);
         }
+
         return new String(sb);
     }
 

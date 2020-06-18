@@ -7,8 +7,8 @@ package main.java.kyu7;
  *
  * Details:
  *
- * Given two integers a and b, which can be positive or negative, find the sum of all the numbers between including
- * them too and return it. If the two numbers are equal return a or b.
+ * Given two integers a and b, which can be positive or negative, find the sum of all the numbers
+ * between including them too and return it. If the two numbers are equal return a or b.
  *
  * Note: a and b are not ordered!
  */
@@ -16,9 +16,11 @@ package main.java.kyu7;
 public class SumOfNumbers {
     public int GetSum(int a, int b) {
         int result = 0;
+
         for (int i = Math.min(a,b); i <= Math.max(a,b); i++) {
             result += i;
         }
+
         return result;
     }
 }

@@ -7,11 +7,11 @@ package main.java.kyu6;
  *
  * Details:
  *
- * Define a function that takes an integer argument and returns logical value true or false depending on if the integer
- * is a prime.
+ * Define a function that takes an integer argument and returns logical value true or false
+ * depending on if the integer is a prime.
  *
- * Per Wikipedia, a prime number (or a prime) is a natural number greater than 1 that has no positive divisors other
- * than 1 and itself.
+ * Per Wikipedia, a prime number (or a prime) is a natural number greater than 1 that has no
+ * positive divisors other than 1 and itself.
  */
 
 public class IsANumberPrime {
@@ -21,7 +21,8 @@ public class IsANumberPrime {
         } else if (num == 2) {
             return true;
         } else {
-            for (int i = 2; i <= Math.sqrt(num); i++) {
+            final int limit = (int) Math.sqrt(num);
+            for (int i = 2; i <= limit; i++) {
                 if (num % i == 0) {
                     return false;
                 }
