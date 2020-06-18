@@ -123,7 +123,8 @@ public class BattleField {
                         currentY = i + dY;
                         currentX = j + dX;
                         size++;
-                        System.out.println(String.format("\t- found ship part at %d %d. Direction is %d %d", i, j, dY, dX));
+                        System.out.println(String.format(
+                                "\t- found ship part at %d %d. Direction is %d %d", i, j, dY, dX));
                         break;
                     } else {
                         checkedCells[i][j] = true;
@@ -133,7 +134,10 @@ public class BattleField {
         }
 
         if (currentX != -1) {
-            for ( ;currentX >= 0 && currentX < game[0].length && currentY >= 0 && currentY < game.length; currentX += dX, currentY += dY) {
+            for ( ; currentX >= 0 &&
+                    currentX < game[0].length &&
+                    currentY >= 0 &&
+                    currentY < game.length; currentX += dX, currentY += dY) {
                 if (game[currentY][currentX] == 1) {
                     if (isDiagonalNeighborPresent(currentY, currentX)) return false;
                     size++;
