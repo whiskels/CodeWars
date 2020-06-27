@@ -60,7 +60,7 @@ public class RailFenceCipher {
 
         for (int i = 0; i < s.length(); i++) {
             int j = i % ((n - 1) * 2);
-            j = j >= n ? n - (j % n) - 2  : j % n;
+            j = j >= n ? n - (j % n) - 2 : j % n;
             sbList.get(j).append(s.charAt(i));
         }
 
@@ -77,7 +77,7 @@ public class RailFenceCipher {
         if (s == null || s.length() == 0) {
             return "";
         }
-        
+
         int currRow = 0;
         int rowDirection = 1;
         int currIndex = 0;
@@ -90,9 +90,9 @@ public class RailFenceCipher {
         for (int i = 0; i < s.length(); i++) {
             chars.set(currIndex, s.charAt(i));
 
-            currIndex += (n-1) * 2;
+            currIndex += (n - 1) * 2;
 
-            if (currRow > 0 && currRow < n-1) {
+            if (currRow > 0 && currRow < n - 1) {
                 int addIndex = currIndex - (currRow * 2);
 
                 if (addIndex < s.length() && (i + 1 < s.length())) {
@@ -102,14 +102,15 @@ public class RailFenceCipher {
 
             if (currIndex >= s.length()) {
                 if (currRow == 0) rowDirection = 1;
-                if (currRow == n-1) rowDirection = -1;
+                if (currRow == n - 1) rowDirection = -1;
 
                 currRow += rowDirection;
                 currIndex = currRow;
             }
         }
 
-        StringBuilder sb = new StringBuilder();
+        final StringBuilder sb = new StringBuilder();
+
         for (Character c : chars) {
             sb.append(c);
         }

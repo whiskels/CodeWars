@@ -29,7 +29,8 @@ package main.java.kyu3;
  *   - The ship cannot overlap or be in contact with any other ship, neither by edge nor by corner.
  */
 
-import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 public class BattleField {
     private static int submarines;
@@ -101,9 +102,9 @@ public class BattleField {
 
     private static boolean isValidCoodrinates(int y, int x) {
         return y >= 0 &&
-               x >= 0 &&
-               y < game.length &&
-               x < game[y].length;
+                x >= 0 &&
+                y < game.length &&
+                x < game[y].length;
     }
 
     private static boolean findShip(int y, int x) {
@@ -134,7 +135,7 @@ public class BattleField {
         }
 
         if (currentX != -1) {
-            for ( ; currentX >= 0 &&
+            for (; currentX >= 0 &&
                     currentX < game[0].length &&
                     currentY >= 0 &&
                     currentY < game.length; currentX += dX, currentY += dY) {
@@ -148,7 +149,7 @@ public class BattleField {
             }
         }
 
-        removeShipBySize(currentY-dY, currentX-dX, dY, dX, size);
+        removeShipBySize(currentY - dY, currentX - dX, dY, dX, size);
 
         return submarines >= 0 && cruiserShips >= 0 && destroyers >= 0 && battleShips >= 0;
     }
@@ -175,12 +176,10 @@ public class BattleField {
         if (size == 2) {
             destroyers--;
             System.out.println(String.format("\t- Destroyer count: %d", destroyers));
-        }
-        else if (size == 3) {
+        } else if (size == 3) {
             cruiserShips--;
             System.out.println(String.format("\t- Cruiser count: %d", cruiserShips));
-        }
-        else if (size == 4) {
+        } else if (size == 4) {
             battleShips--;
             System.out.println(String.format("\t- Battleship count: %d", battleShips));
         }
