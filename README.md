@@ -1,10 +1,10 @@
 # CodeWars
-Java solutions
+![alt text](https://www.codewars.com/users/whiskels/badges/micro)
 
 [Profile](https://www.codewars.com/users/whiskels)
-![alt text](https://www.codewars.com/users/whiskels/badges/large)
 
-Contains solved katas. Each solved kata consist of javadoc with info about it, code and JUnit tests in same file (in some katas).
+
+Contains katas solved in Java. Each solved kata consists of javadoc with info about it, code and (in some katas) JUnit tests in same file.
 This structure is used in order to facilitate analysis of solution.
 
 ## Katas:
