@@ -11,6 +11,7 @@ This structure is used in order to facilitate analysis of solution.
 ### 3 kyu:
 - [Battleship field validator](https://github.com/whiskels/CodeWars/blob/master/src/main/java/kyu3/BattleField.java)
 - [Rail Fence Cipher](https://github.com/whiskels/CodeWars/blob/master/src/main/java/kyu3/RailFenceCipher.java)
+- [Make a spiral](https://github.com/whiskels/CodeWars/blob/master/src/main/java/kyu3/MakeASpiral.java)
 ### 4 kyu:
 - [Boggle World Checker](https://github.com/whiskels/CodeWars/blob/master/src/main/java/kyu4/Boggle.java)
 - [Conway's Game of Life - Unlimited Edition](https://github.com/whiskels/CodeWars/blob/master/src/main/java/kyu4/ConwayLife.java)
