@@ -3,7 +3,6 @@
 
 [Profile](https://www.codewars.com/users/whiskels)
 
-
 Contains katas solved in Java. Each solved kata consists of javadoc with info about it, code and (in some katas) JUnit tests in same file.
 This structure is used in order to facilitate analysis of solution.
 
@@ -24,6 +23,7 @@ This structure is used in order to facilitate analysis of solution.
 - [Strip comments](https://github.com/whiskels/CodeWars/blob/master/src/main/java/kyu4/StripComments.java)
 - [Sudoku solution validator](https://github.com/whiskels/CodeWars/blob/master/src/main/java/kyu4/SudokuSolutionValidator.java)
 - [Human readable duration format](https://github.com/whiskels/CodeWars/blob/master/src/main/java/kyu4/TimeFormatter.java)
+- [Most frequently used words in a text](https://github.com/whiskels/CodeWars/blob/master/src/main/java/kyu4/TopWords.java)
 ### 5 kyu:
 - [Factorial decomposition](https://github.com/whiskels/CodeWars/blob/master/src/main/java/kyu5/FactorialDecomposition.java)
 - [Human readable time](https://github.com/whiskels/CodeWars/blob/master/src/main/java/kyu5/HumanReadableTime.java)
@@ -31,6 +31,7 @@ This structure is used in order to facilitate analysis of solution.
 - [Simple pig latin](https://github.com/whiskels/CodeWars/blob/master/src/main/java/kyu5/SimplePigLatin.java)
 - [Snakes and Ladders](https://github.com/whiskels/CodeWars/blob/master/src/main/java/kyu5/SnakesLadders.java)
 - [What's the Perfect Power anyway?](https://github.com/whiskels/CodeWars/blob/master/src/main/java/kyu5/WhatsThePerfectPowerAnyway.java)
+- [Scramblies](https://github.com/whiskels/CodeWars/blob/master/src/main/java/kyu5/Scramblies.java)
 ### 6 kyu:
 - [Are they the "same"?](https://github.com/whiskels/CodeWars/blob/master/src/main/java/kyu6/AreTheyTheSame.java)
 - [Break camelCase](https://github.com/whiskels/CodeWars/blob/master/src/main/java/kyu6/BreakCamelCase.java)
