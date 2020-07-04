@@ -72,7 +72,6 @@ public class MakeASpiral {
                 dirY = 0;
                 leftBorder +=2;
             }
-            System.out.println(y + " " + x);
            arr[y][x] = 0;
 
             if (y == lastY && x == lastX) {
