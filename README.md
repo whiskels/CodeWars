@@ -12,7 +12,6 @@ This structure is used in order to facilitate analysis of solution.
 - [Rail Fence Cipher](https://github.com/whiskels/CodeWars/blob/master/src/main/java/kyu3/RailFenceCipher.java)
 - [Make a spiral](https://github.com/whiskels/CodeWars/blob/master/src/main/java/kyu3/MakeASpiral.java)
 - [The lift](https://github.com/whiskels/CodeWars/blob/master/src/main/java/kyu3/Dinglemouse.java)
-
 ### 4 kyu:
 - [Boggle World Checker](https://github.com/whiskels/CodeWars/blob/master/src/main/java/kyu4/Boggle.java)
 - [Conway's Game of Life - Unlimited Edition](https://github.com/whiskels/CodeWars/blob/master/src/main/java/kyu4/ConwayLife.java)
@@ -24,6 +23,8 @@ This structure is used in order to facilitate analysis of solution.
 - [Sudoku solution validator](https://github.com/whiskels/CodeWars/blob/master/src/main/java/kyu4/SudokuSolutionValidator.java)
 - [Human readable duration format](https://github.com/whiskels/CodeWars/blob/master/src/main/java/kyu4/TimeFormatter.java)
 - [Most frequently used words in a text](https://github.com/whiskels/CodeWars/blob/master/src/main/java/kyu4/TopWords.java)
+- [Strings Mix](https://github.com/whiskels/CodeWars/blob/master/src/main/java/kyu4/StringsMix.java)
+
 ### 5 kyu:
 - [Factorial decomposition](https://github.com/whiskels/CodeWars/blob/master/src/main/java/kyu5/FactorialDecomposition.java)
 - [Human readable time](https://github.com/whiskels/CodeWars/blob/master/src/main/java/kyu5/HumanReadableTime.java)
