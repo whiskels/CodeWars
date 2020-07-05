@@ -10,9 +10,9 @@ package main.java.kyu3;
  * Your task, is to create a NxN spiral with a given size.
  */
 
-import java.util.Arrays;
-
 import org.junit.Test;
+
+import java.util.Arrays;
 
 import static org.junit.Assert.assertArrayEquals;
 
@@ -52,13 +52,13 @@ public class MakeASpiral {
                 y++;
                 dirX = 0;
                 dirY = 1;
-                upperBorder +=2;
+                upperBorder += 2;
             } else if (x == leftBorder && y == lowerBorder - 1) {
                 x++;
                 y--;
                 dirX = 0;
                 dirY = -1;
-                lowerBorder -=2;
+                lowerBorder -= 2;
             } else if (y == lowerBorder && x == rightBorder - 1) {
                 y--;
                 x--;
@@ -70,9 +70,9 @@ public class MakeASpiral {
                 x++;
                 dirX = 1;
                 dirY = 0;
-                leftBorder +=2;
+                leftBorder += 2;
             }
-           arr[y][x] = 0;
+            arr[y][x] = 0;
 
             if (y == lastY && x == lastX) {
                 break;
@@ -87,7 +87,7 @@ public class MakeASpiral {
     }
 
     public static int[][] fill(int[][] arr) {
-        for (int[] row: arr) {
+        for (int[] row : arr) {
             Arrays.fill(row, 1);
         }
         return arr;
@@ -96,12 +96,12 @@ public class MakeASpiral {
     @Test
     public void test5() {
         assertArrayEquals(
-                new int[][] {
-                        { 1, 1, 1, 1, 1 },
-                        { 0, 0, 0, 0, 1 },
-                        { 1, 1, 1, 0, 1 },
-                        { 1, 0, 0, 0, 1 },
-                        { 1, 1, 1, 1, 1 }
+                new int[][]{
+                        {1, 1, 1, 1, 1},
+                        {0, 0, 0, 0, 1},
+                        {1, 1, 1, 0, 1},
+                        {1, 0, 0, 0, 1},
+                        {1, 1, 1, 1, 1}
                 },
                 spiralize(5));
     }
@@ -109,15 +109,15 @@ public class MakeASpiral {
     @Test
     public void test8() {
         assertArrayEquals(
-                new int[][] {
-                        { 1, 1, 1, 1, 1, 1, 1, 1 },
-                        { 0, 0, 0, 0, 0, 0, 0, 1 },
-                        { 1, 1, 1, 1, 1, 1, 0, 1 },
-                        { 1, 0, 0, 0, 0, 1, 0, 1 },
-                        { 1, 0, 1, 0, 0, 1, 0, 1 },
-                        { 1, 0, 1, 1, 1, 1, 0, 1 },
-                        { 1, 0, 0, 0, 0, 0, 0, 1 },
-                        { 1, 1, 1, 1, 1, 1, 1, 1 },
+                new int[][]{
+                        {1, 1, 1, 1, 1, 1, 1, 1},
+                        {0, 0, 0, 0, 0, 0, 0, 1},
+                        {1, 1, 1, 1, 1, 1, 0, 1},
+                        {1, 0, 0, 0, 0, 1, 0, 1},
+                        {1, 0, 1, 0, 0, 1, 0, 1},
+                        {1, 0, 1, 1, 1, 1, 0, 1},
+                        {1, 0, 0, 0, 0, 0, 0, 1},
+                        {1, 1, 1, 1, 1, 1, 1, 1},
                 },
                 spiralize(8));
     }

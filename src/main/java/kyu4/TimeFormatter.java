@@ -84,10 +84,11 @@ public class TimeFormatter {
                 sb.append("s");
             } else if (i < time.size() - 2) {
                 sb.append(", ");
-            } else if (i == time.size()- 2) {
+            } else if (i == time.size() - 2) {
                 sb.append(" and ");
             }
         }
+
         return new String(sb);
     }
 

@@ -64,9 +64,9 @@ public class Dinglemouse {
     private final Map<Integer, List> queues;    // Current queues
     private boolean isFinished;                 // Is everyone at desired floor
     private Direction direction;                // Current travel direction
-    private List<Passenger> peopleInside;          // List of people inside lift
+    private List<Passenger> peopleInside;       // List of people inside lift
     private List<Integer> visitedFloors;        // Floors that lift has visited
-    private int currentFloor, limitFloor; // Floor variables (current, max next)
+    private int currentFloor, limitFloor;       // Floor variables (current, max next)
 
     private static enum Direction {UP, DOWN;}
 

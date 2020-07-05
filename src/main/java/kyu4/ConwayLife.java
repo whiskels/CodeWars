@@ -46,7 +46,6 @@ public class ConwayLife {
         for (int y = 0; y < height; y++) {
             for (int x = 0; x < width; x++) {
                 final int neighbors = countAliveNeighbors(currGen, x, y);
-
                 if (neighbors == 3 && currGen[y][x] == 0) {
                     nextGen[y][x] = 1;
                 } else if ((neighbors > 3 || neighbors < 2) && currGen[y][x] == 1) {
@@ -56,7 +55,6 @@ public class ConwayLife {
                 }
             }
         }
-
         nextGen = crop(nextGen);
 
         return nextGen;
