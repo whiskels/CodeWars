@@ -24,7 +24,6 @@ This structure is used in order to facilitate analysis of solution.
 - [Human readable duration format](https://github.com/whiskels/CodeWars/blob/master/src/main/java/kyu4/TimeFormatter.java)
 - [Most frequently used words in a text](https://github.com/whiskels/CodeWars/blob/master/src/main/java/kyu4/TopWords.java)
 - [Strings Mix](https://github.com/whiskels/CodeWars/blob/master/src/main/java/kyu4/StringsMix.java)
-
 ### 5 kyu:
 - [Factorial decomposition](https://github.com/whiskels/CodeWars/blob/master/src/main/java/kyu5/FactorialDecomposition.java)
 - [Human readable time](https://github.com/whiskels/CodeWars/blob/master/src/main/java/kyu5/HumanReadableTime.java)
@@ -33,6 +32,7 @@ This structure is used in order to facilitate analysis of solution.
 - [Snakes and Ladders](https://github.com/whiskels/CodeWars/blob/master/src/main/java/kyu5/SnakesLadders.java)
 - [What's the Perfect Power anyway?](https://github.com/whiskels/CodeWars/blob/master/src/main/java/kyu5/WhatsThePerfectPowerAnyway.java)
 - [Scramblies](https://github.com/whiskels/CodeWars/blob/master/src/main/java/kyu5/Scramblies.java)
+- [Double cola](https://github.com/whiskels/CodeWars/blob/master/src/main/java/kyu5/DoubleCola.java)
 ### 6 kyu:
 - [Are they the "same"?](https://github.com/whiskels/CodeWars/blob/master/src/main/java/kyu6/AreTheyTheSame.java)
 - [Break camelCase](https://github.com/whiskels/CodeWars/blob/master/src/main/java/kyu6/BreakCamelCase.java)
@@ -56,6 +56,7 @@ This structure is used in order to facilitate analysis of solution.
 - [Vasya clerk](https://github.com/whiskels/CodeWars/blob/master/src/main/java/kyu6/VasyaClerk.java)
 - [Where is my parent](https://github.com/whiskels/CodeWars/blob/master/src/main/java/kyu6/WhereIsMyParent.java)
 - [Who likes it](https://github.com/whiskels/CodeWars/blob/master/src/main/java/kyu6/WhoLikesIt.java)
+- [Persistent bugger](https://github.com/whiskels/CodeWars/blob/master/src/main/java/kyu6/PersistentBugger.java)
 ### 7 kyu:
 - [Halving sum](https://github.com/whiskels/CodeWars/blob/master/src/main/java/kyu7/HalvingSum.java)
 - [Jaden case strings](https://github.com/whiskels/CodeWars/blob/master/src/main/java/kyu7/JadenCasingStrings.java)
