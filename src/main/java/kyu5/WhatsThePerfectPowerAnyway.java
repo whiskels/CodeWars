@@ -32,7 +32,8 @@
 
     public class WhatsThePerfectPowerAnyway {
         public static int[] isPerfectPower(int n) {
-            for (int i = 2, j = 2; i <= Math.sqrt(n); ) {
+            final double sqrt = Math.sqrt(n);
+            for (int i = 2, j = 2; i <= sqrt; ) {
                 final int currentPow = (int) Math.pow(i, j);
 
                 if (currentPow == n) {

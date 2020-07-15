@@ -2,18 +2,18 @@ package main.java.kyu4;
 
 /**
  * 4 kyu - Conway's Game of Life - Unlimited Edition
- *
+ * <p>
  * https://www.codewars.com/kata/52423db9add6f6fc39000354
- *
+ * <p>
  * Given a 2D array and a number of generations, compute n timesteps of Conway's Game of Life.
- *
+ * <p>
  * The rules of the game are:
- *
- *     Any live cell with fewer than two live neighbours dies, as if caused by underpopulation.
- *     Any live cell with more than three live neighbours dies, as if by overcrowding.
- *     Any live cell with two or three live neighbours lives on to the next generation.
- *     Any dead cell with exactly three live neighbours becomes a live cell.
- *
+ * <p>
+ * Any live cell with fewer than two live neighbours dies, as if caused by underpopulation.
+ * Any live cell with more than three live neighbours dies, as if by overcrowding.
+ * Any live cell with two or three live neighbours lives on to the next generation.
+ * Any dead cell with exactly three live neighbours becomes a live cell.
+ * <p>
  * Each cell's neighborhood is the 8 cells immediately around it (i.e. Moore Neighborhood).
  * The universe is infinite in both the x and y dimensions and all cells are initially dead -
  * except for those specified in the arguments. The return value should be a 2d array cropped
@@ -21,7 +21,8 @@ package main.java.kyu4;
  */
 
 public class ConwayLife {
-    private static int height, width;
+    private static int height;
+    private static int width;
 
     public static int[][] getGeneration(int[][] cells, int generations) {
         if (generations < 0) {
@@ -95,7 +96,8 @@ public class ConwayLife {
     public static int[][] crop(int[][] cells) {
         int minY = cells.length;
         int minX = cells[0].length;
-        int maxY = 0, maxX = 0;
+        int maxY = 0;
+        int maxX = 0;
 
         for (int y = 0; y < cells.length; y++) {
             for (int x = 0; x < cells[0].length; x++) {

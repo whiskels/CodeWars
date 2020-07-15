@@ -25,7 +25,7 @@ import org.junit.Test;
 import static org.junit.Assert.assertArrayEquals;
 
 public class MergeIn2048 {
-    static int[] merge(int[] line) {
+    public static int[] merge(int[] line) {
         if (line == null || line.length == 0) {
             return new int[0];
         }

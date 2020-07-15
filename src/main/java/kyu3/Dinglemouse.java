@@ -231,12 +231,6 @@ public class Dinglemouse {
                 .orElse(currentFloor);
     }
 
-    /* Checks if floor has passengers with direction same as lift's */
-    private boolean isFloorWithSameDirectionPassengers(final int floor) {
-        return queues.get(floor).stream()
-                .anyMatch(passenger -> isSameDirection((Passenger) passenger));
-    }
-
     /* Adds passengers from current floor to lift */
     private void pickPassengers() {
         final List<Passenger> floor = queues.get(currentFloor);

@@ -29,11 +29,6 @@ package main.java.kyu3;
  *   - The ship cannot overlap or be in contact with any other ship, neither by edge nor by corner.
  */
 
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
-
-import static org.junit.Assert.assertEquals;
-
 public class BattleField {
     private final int[][] field;
     private boolean[][] checkedCells;
@@ -195,13 +190,13 @@ public class BattleField {
 
         System.out.println(String.format("\t- ship size: %d", size));
 
-        if (size == 2) {
+        if (sizeCopy == 2) {
             destroyers--;
             System.out.println(String.format("\t- Destroyer count: %d", destroyers));
-        } else if (size == 3) {
+        } else if (sizeCopy == 3) {
             cruiserShips--;
             System.out.println(String.format("\t- Cruiser count: %d", cruiserShips));
-        } else if (size == 4) {
+        } else if (sizeCopy == 4) {
             battleShips--;
             System.out.println(String.format("\t- Battleship count: %d", battleShips));
         }

@@ -32,7 +32,9 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class HowManyNumbers {
-    private static long count, min, max;
+    private static long count;
+    private static long min;
+    private static long max;
 
     public static List<Long> findAll(final int sumDigits, final int numDigits) {
         count = 0;

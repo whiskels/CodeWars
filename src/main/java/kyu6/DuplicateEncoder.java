@@ -17,7 +17,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 public class DuplicateEncoder {
-    static String encode(String word) {
+    public static String encode(String word) {
         final ArrayList<Character> chars = new ArrayList<>();
         final StringBuilder line = new StringBuilder();
 
