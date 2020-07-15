@@ -40,18 +40,18 @@ public class ConwayLife {
     }
 
     private static final int[][] nextGeneration(int[][] currGen) {
-        currGen = expand(currGen);
+        int[][] expand = expand(currGen);
         int[][] nextGen = new int[height][width];
 
         for (int y = 0; y < height; y++) {
             for (int x = 0; x < width; x++) {
-                final int neighbors = countAliveNeighbors(currGen, x, y);
-                if (neighbors == 3 && currGen[y][x] == 0) {
+                final int neighbors = countAliveNeighbors(expand, x, y);
+                if (neighbors == 3 && expand[y][x] == 0) {
                     nextGen[y][x] = 1;
-                } else if ((neighbors > 3 || neighbors < 2) && currGen[y][x] == 1) {
+                } else if ((neighbors > 3 || neighbors < 2) && expand[y][x] == 1) {
                     nextGen[y][x] = 0;
                 } else {
-                    nextGen[y][x] = currGen[y][x];
+                    nextGen[y][x] = expand[y][x];
                 }
             }
         }

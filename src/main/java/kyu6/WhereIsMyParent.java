@@ -25,7 +25,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 public class WhereIsMyParent {
-    static String findChildren(final String text) {
+    public static String findChildren(final String text) {
         final ArrayList<Character> chars = new ArrayList<>();
 
         for (Character ch : text.toCharArray()) {

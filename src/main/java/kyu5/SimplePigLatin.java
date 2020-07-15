@@ -45,7 +45,7 @@ public class SimplePigLatin {
     }
 
     @Test
-    public void FixedTests() {
+    public void fixedTests() {
         assertEquals("igPay atinlay siay oolcay", pigIt("Pig latin is cool"));
         assertEquals("hisTay siay ymay tringsay", pigIt("This is my string"));
     }

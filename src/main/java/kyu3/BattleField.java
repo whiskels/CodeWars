@@ -32,6 +32,8 @@ package main.java.kyu3;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.Assert.assertEquals;
+
 public class BattleField {
     private final int[][] field;
     private boolean[][] checkedCells;
@@ -210,69 +212,5 @@ public class BattleField {
             y -= dY;
             sizeCopy--;
         }
-    }
-
-    @Test
-    public void sampleTest() {
-        int[][] battleField = {
-                {1, 0, 0, 0, 0, 1, 1, 0, 0, 0},
-                {1, 0, 1, 0, 0, 0, 0, 0, 1, 0},
-                {1, 0, 1, 0, 1, 1, 1, 0, 1, 0},
-                {1, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-                {0, 0, 0, 0, 0, 0, 0, 0, 1, 0},
-                {0, 0, 0, 0, 1, 1, 1, 0, 0, 0},
-                {0, 0, 0, 0, 0, 0, 0, 0, 1, 0},
-                {0, 0, 0, 1, 0, 0, 0, 0, 0, 0},
-                {0, 0, 0, 0, 0, 0, 0, 1, 0, 0},
-                {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}};
-        Assertions.assertEquals(true, BattleField.fieldValidator(battleField));
-    }
-
-    @Test
-    public void solutionTest() {
-        int[][] battleField = {
-                {0, 0, 0, 1, 0, 0, 1, 0, 0, 1},
-                {0, 0, 0, 0, 0, 0, 1, 0, 0, 0},
-                {0, 0, 0, 0, 0, 0, 1, 0, 0, 0},
-                {0, 0, 0, 1, 0, 0, 0, 0, 0, 0},
-                {0, 0, 0, 1, 0, 1, 0, 1, 1, 1},
-                {0, 1, 0, 0, 0, 0, 0, 0, 0, 0},
-                {0, 0, 0, 0, 1, 0, 0, 0, 1, 0},
-                {0, 0, 0, 0, 1, 0, 0, 0, 1, 0},
-                {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-                {0, 0, 1, 1, 1, 1, 0, 0, 0, 0}};
-        Assertions.assertEquals(true, BattleField.fieldValidator(battleField));
-    }
-
-    @Test
-    public void randomTest1() {
-        int[][] battleField = {
-                {0, 0, 0, 1, 1, 1, 0, 0, 0, 0},
-                {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-                {0, 0, 0, 0, 0, 1, 1, 0, 0, 0},
-                {0, 1, 0, 0, 0, 0, 0, 0, 0, 0},
-                {0, 0, 0, 0, 0, 0, 1, 0, 1, 0},
-                {0, 0, 0, 0, 0, 0, 0, 0, 1, 0},
-                {0, 0, 0, 1, 0, 0, 1, 0, 1, 0},
-                {1, 0, 0, 1, 0, 0, 0, 0, 0, 0},
-                {0, 0, 0, 0, 0, 0, 0, 1, 0, 0},
-                {0, 0, 1, 1, 1, 1, 0, 1, 0, 0}};
-        Assertions.assertEquals(true, BattleField.fieldValidator(battleField));
-    }
-
-    @Test
-    public void randomTest2() {
-        int[][] battleField = {
-                {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-                {1, 0, 1, 0, 0, 0, 0, 1, 1, 0},
-                {1, 0, 1, 0, 0, 0, 0, 0, 0, 0},
-                {0, 0, 0, 0, 1, 0, 0, 0, 0, 0},
-                {0, 0, 0, 0, 1, 0, 1, 0, 0, 0},
-                {0, 0, 0, 0, 1, 0, 0, 0, 0, 0},
-                {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-                {0, 1, 0, 0, 0, 0, 0, 1, 1, 1},
-                {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-                {0, 1, 0, 1, 1, 1, 1, 0, 0, 1}};
-        Assertions.assertEquals(true, BattleField.fieldValidator(battleField));
     }
 }

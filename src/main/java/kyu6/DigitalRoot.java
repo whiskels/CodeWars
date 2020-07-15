@@ -19,20 +19,21 @@ import static org.junit.Assert.assertEquals;
 
 public class DigitalRoot {
     public static int digital_root(int n) {
-        if (n / 10 == 0) {
-            return n;
+        int i = n;
+        if (i / 10 == 0) {
+            return i;
         } else {
             int sum = 0;
-            while (n > 0) {
-                sum += n % 10;
-                n /= 10;
+            while (i > 0) {
+                sum += i % 10;
+                i /= 10;
             }
             return digital_root(sum);
         }
     }
 
     @Test
-    public void Tests() {
+    public void tests() {
         assertEquals("Nope!", 7, digital_root(16));
         assertEquals("Nope!", 6, digital_root(456));
     }

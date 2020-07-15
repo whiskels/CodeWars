@@ -82,7 +82,8 @@ public class SudokuSolutionValidator {
     private final static boolean check(int[][] sudoku, boolean isFlipped) {
         for (int y = 0; y < size; y++) {
             for (int x = 0; x < size; x++) {
-                int i, j;
+                int i;
+                int j;
 
                 if (isFlipped) {
                     i = x;

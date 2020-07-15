@@ -48,8 +48,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class TimeFormatter {
     static class TimeUnit {
-        String name;
-        int value;
+        private String name;
+        private     int value;
 
         TimeUnit(String name, int value) {
             this.name = name;

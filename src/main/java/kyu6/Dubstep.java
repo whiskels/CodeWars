@@ -48,11 +48,11 @@ public class Dubstep {
     }
 
     @Test
-    public void Test1() {
+    public void test1() {
         assertEquals("ABC", new Dubstep().SongDecoder("WUBWUBABCWUB"));
     }
     @Test
-    public void Test2()
+    public void test2()
     {
         assertEquals("R L", new Dubstep().SongDecoder("RWUBWUBWUBLWUB"));
     }

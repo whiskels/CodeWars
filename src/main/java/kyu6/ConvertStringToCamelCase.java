@@ -13,7 +13,7 @@ package main.java.kyu6;
  */
 
 public class ConvertStringToCamelCase {
-    static String toCamelCase(String s) {
+    public static String toCamelCase(String s) {
         final String regex = "([^a-zA-Z']+)'*\\1*";
         final String[] split = s.split(regex);
         final StringBuilder sb = new StringBuilder();

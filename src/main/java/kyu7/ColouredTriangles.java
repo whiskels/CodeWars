@@ -28,14 +28,12 @@ package main.java.kyu7;
  * Adapted from the 2017 British Informatics Olympiad
  */
 
-import java.awt.*;
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
-import org.junit.runners.JUnit4;
 
 public class ColouredTriangles {
     public static char triangle(final String row) {
-        if (row.length() == 1) return row.charAt(1);
+        if (row.length() == 1) return row.charAt(0);
 
         int currentLength = row.length();
         String previousRow = row;

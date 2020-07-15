@@ -26,10 +26,10 @@ public class MakeASpiral {
     }
 
     public static int[][] spiralize(int[][] arr) {
-        arr = fill(arr);
+        int[][] fill = fill(arr);
 
-        final int height = arr.length;
-        final int width = arr[0].length;
+        final int height = fill.length;
+        final int width = fill[0].length;
         int lastY = height / 2;
         int lastX = width % 2 == 0 ? width / 2 - 1 : width / 2;
 
@@ -72,7 +72,7 @@ public class MakeASpiral {
                 dirY = 0;
                 leftBorder += 2;
             }
-            arr[y][x] = 0;
+            fill[y][x] = 0;
 
             if (y == lastY && x == lastX) {
                 break;
@@ -83,7 +83,7 @@ public class MakeASpiral {
             i++;
         }
 
-        return arr;
+        return fill;
     }
 
     public static int[][] fill(int[][] arr) {

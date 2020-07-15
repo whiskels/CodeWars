@@ -15,7 +15,7 @@ package main.java.kyu7;
  */
 
 public class HalvingSum {
-    int halvingSum(int n) {
+    public int halvingSum(int n) {
         return n == 0 ? 0 : n + halvingSum( n / 2);
     }
 }

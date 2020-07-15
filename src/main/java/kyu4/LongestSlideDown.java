@@ -25,7 +25,7 @@ package main.java.kyu4;
  * pyramid representation as argument and returns its' largest 'slide down'. For example,
  */
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 
 public class LongestSlideDown {
