@@ -35,14 +35,15 @@ import static org.junit.Assert.assertEquals;
 
 public class DoubleCola {
     public static String WhoIsNext(String[] names, int n) {
-        n--;
+        int i = n;
+        i--;
 
         final int len = names.length;
-        while (n >= len) {
-            n = (int) Math.floor((n - names.length) / 2);
+        while (i >= len) {
+            i = (int) Math.floor((i - names.length) / 2);
         }
 
-        return names[n];
+        return names[i];
     }
 
     @Test

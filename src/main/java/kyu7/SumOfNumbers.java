@@ -14,7 +14,7 @@ package main.java.kyu7;
  */
 
 public class SumOfNumbers {
-    public int GetSum(int a, int b) {
+    public int getSum(int a, int b) {
         int result = 0;
 
         for (int i = Math.min(a,b); i <= Math.max(a,b); i++) {

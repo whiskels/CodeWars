@@ -135,7 +135,7 @@ public class HowManyNumbers {
     }
 
     @Test
-    public void HardTests() {
+    public void hardTests() {
         assertEquals(Arrays.asList(409L, 11112999L, 44444445L),
                 HowManyNumbers.findAll(33, 8));
     }

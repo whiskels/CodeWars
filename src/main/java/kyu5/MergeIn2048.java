@@ -23,7 +23,6 @@ package main.java.kyu5;
 
 import org.junit.Test;
 import static org.junit.Assert.assertArrayEquals;
-import org.junit.runners.JUnit4;
 
 public class MergeIn2048 {
     static int[] merge(int[] line) {

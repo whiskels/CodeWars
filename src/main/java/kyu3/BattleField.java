@@ -125,6 +125,7 @@ public class BattleField {
             for (int j = x - 1; j <= x + 1; j++) {
                 if (isValidCoodrinates(i, j)) {
                     if (i == y && j == x) {
+                        continue;
                     } else if (field[i][j] == 1) {
                         if (isDiagonalNeighborPresent(i, j)) return false;
                         dY = i - y;
@@ -186,6 +187,10 @@ public class BattleField {
 
     /* Decrements ship counter based on ship size */
     private void removeShipBySize(int currentY, int currentX, int dY, int dX, int size) {
+        int y = currentY;
+        int x = currentX;
+        int sizeCopy = size;
+
         System.out.println(String.format("\t- ship size: %d", size));
 
         if (size == 2) {
@@ -200,15 +205,15 @@ public class BattleField {
         }
 
         while (size != 0) {
-            checkedCells[currentY][currentX] = true;
-            currentX -= dX;
-            currentY -= dY;
-            size--;
+            checkedCells[currentY][x] = true;
+            x -= dX;
+            y -= dY;
+            sizeCopy--;
         }
     }
 
     @Test
-    public void SampleTest() {
+    public void sampleTest() {
         int[][] battleField = {
                 {1, 0, 0, 0, 0, 1, 1, 0, 0, 0},
                 {1, 0, 1, 0, 0, 0, 0, 0, 1, 0},
@@ -224,7 +229,7 @@ public class BattleField {
     }
 
     @Test
-    public void SolutionTest() {
+    public void solutionTest() {
         int[][] battleField = {
                 {0, 0, 0, 1, 0, 0, 1, 0, 0, 1},
                 {0, 0, 0, 0, 0, 0, 1, 0, 0, 0},
@@ -240,7 +245,7 @@ public class BattleField {
     }
 
     @Test
-    public void RandomTest1() {
+    public void randomTest1() {
         int[][] battleField = {
                 {0, 0, 0, 1, 1, 1, 0, 0, 0, 0},
                 {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
@@ -256,7 +261,7 @@ public class BattleField {
     }
 
     @Test
-    public void RandomTest2() {
+    public void randomTest2() {
         int[][] battleField = {
                 {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
                 {1, 0, 1, 0, 0, 0, 0, 1, 1, 0},

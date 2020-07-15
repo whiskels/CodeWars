@@ -43,7 +43,6 @@ import java.util.ArrayList;
 public class SnakesLadders {
     private ArrayList<Player> players = new ArrayList<>();
     private ArrayList<Ladder> modifiers = new ArrayList<>();
-    private ArrayList<Slope> slopes = new ArrayList<>();
     private boolean isGameStopped;
 
     public SnakesLadders() {
@@ -79,7 +78,7 @@ public class SnakesLadders {
     }
 
     class Ladder {
-        int startX, endX;
+        private int startX, endX;
 
         public Ladder(int startX, int endX) {
             this.startX = startX;
@@ -94,8 +93,8 @@ public class SnakesLadders {
     }
 
     class Player {
-        int id, x;
-        boolean isWinner, isCurrentTurn;
+        private int id, x;
+        private boolean isWinner, isCurrentTurn;
 
         public Player(int id) {
             this.id = id;

@@ -72,8 +72,8 @@ public class Dinglemouse {
 
     /* Additional class, representing each passenger standing in a queue */
     class Passenger {
-        int desiredFloor;
-        Direction direction;
+        private final int desiredFloor;
+        private final Direction direction;
 
         public Passenger(int startFloor, int desiredFloor) {
             this.desiredFloor = desiredFloor;
