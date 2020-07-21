@@ -58,9 +58,9 @@ public class StringsMix {
 
         final Map<Character, Long> charactersFromS1 = calculateCharacterFrequency(s1);
         final Map<Character, Long> charactersFromS2 = calculateCharacterFrequency(s2);
-        final List<Character> allCharacters = getMapKeySet(charactersFromS1);
+        final List<Character> allCharacters = new ArrayList<>(charactersFromS1.keySet());
 
-        for (char c : getMapKeySet(charactersFromS2)) {
+        for (char c : new ArrayList<>(charactersFromS2.keySet())) {
             if (!allCharacters.contains(c)) {
                 allCharacters.add(c);
             }
@@ -108,12 +108,6 @@ public class StringsMix {
                 .stream()
                 .filter(e -> e.getValue() > 1)
                 .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
-    }
-
-    private static <K, V> List<K> getMapKeySet(Map<K, V> map) {
-        return map.entrySet().stream()
-                .map(Map.Entry::getKey)
-                .collect(Collectors.toList());
     }
 
     @Test

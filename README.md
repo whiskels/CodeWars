@@ -1,9 +1,7 @@
 # CodeWars
 
 ![alt text](https://www.codewars.com/users/whiskels/badges/micro) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/c26fc725195845d2ac82845bb39c653c)](https://app.codacy.com/manual/whiskels/CodeWars?utm_source=github.com&utm_medium=referral&utm_content=whiskels/CodeWars&utm_campaign=Badge_Grade_Dashboard)
-
-
-
+    
 [Profile](https://www.codewars.com/users/whiskels)
 
 Contains katas solved in Java. Each solved kata consists of javadoc with info about it, code and (in some katas) JUnit tests in same file.
